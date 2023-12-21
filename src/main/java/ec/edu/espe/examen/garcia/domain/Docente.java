@@ -52,17 +52,20 @@ public class Docente {
     public Docente() {
     }
 
-    public Docente(Integer docente) {
-        this.docente = docente;
+
+    public Docente(Integer codDocente) {
+        this.codDocente = codDocente;
     }
+
 
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((docente == null) ? 0 : docente.hashCode());
+        result = prime * result + ((codDocente == null) ? 0 : codDocente.hashCode());
         return result;
     }
+
 
     @Override
     public boolean equals(Object obj) {
@@ -73,20 +76,23 @@ public class Docente {
         if (getClass() != obj.getClass())
             return false;
         Docente other = (Docente) obj;
-        if (docente == null) {
-            if (other.docente != null)
+        if (codDocente == null) {
+            if (other.codDocente != null)
                 return false;
-        } else if (!docente.equals(other.docente))
+        } else if (!codDocente.equals(other.codDocente))
             return false;
         return true;
     }
 
+
     @Override
     public String toString() {
-        return "Docente [docente=" + docente + ", codEspecialidad=" + codEspecialidad + ", cedula=" + cedula
+        return "Docente [codDocente=" + codDocente + ", codEspecialidad=" + codEspecialidad + ", cedula=" + cedula
                 + ", nombre=" + nombre + ", fechaIngreso=" + fechaIngreso + ", titulo=" + titulo + ", especialidad="
                 + especialidad + ", version=" + version + "]";
     }
+
+
 
     
 }
