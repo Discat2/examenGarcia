@@ -24,7 +24,7 @@ public class Docente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "COD_DOCENTE", nullable = false)
-    private Integer docente;
+    private Integer codDocente;
 
     @Column(name = "COD_ESPECIALIDAD", nullable = false, length = 10)
     private String codEspecialidad;

@@ -1,28 +1,25 @@
 package ec.edu.espe.examen.garcia.service;
 
-import java.util.List;
-
 import org.springframework.stereotype.Service;
 
-import ec.edu.espe.examen.garcia.dao.EspecialidadRepository;
+import ec.edu.espe.examen.garcia.dao.DocenteRepository;
 import ec.edu.espe.examen.garcia.domain.Docente;
-import ec.edu.espe.examen.garcia.domain.Especialidad;
 import ec.edu.espe.examen.garcia.service.exceptions.CreateException;
 
 @Service
 public class DocenteService {
-    private final DocenteService docenteService;
+    private final DocenteRepository docenteRepository;
 
-    public DocenteService(DocenteService docenteService) {
-        this.docenteService = docenteService;
+    public DocenteService(DocenteRepository docenteRepository) {
+        this.docenteRepository = docenteRepository;
     }
 
     public Docente create(Docente docente) {
         try {
-            return this.docenteService.save(docente);
+            return this.docenteRepository.save(docente);
         } catch (Exception e) {
             throw new CreateException(
-                    "Ocurrio un error al crear la especialidad: " + docente.toString(), e);
+                    "Ocurrio un error al crear el docente: " + docente.toString(), e);
         }
     }
 }
