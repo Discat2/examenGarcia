@@ -8,10 +8,10 @@
 		<version>3.2.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>ec.edu.espe</groupId>
-	<artifactId>examengarcia</artifactId>
+	<groupId>ec.edu.espe.examen</groupId>
+	<artifactId>garcia</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>examengarcia</name>
+	<name>garcia</name>
 	<description>Examen 1 parcial</description>
 	<properties>
 		<java.version>21</java.version>
