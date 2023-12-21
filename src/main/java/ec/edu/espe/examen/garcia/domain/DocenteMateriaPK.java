@@ -19,7 +19,7 @@ public class DocenteMateriaPK implements Serializable {
 
     public DocenteMateriaPK() {
     }
-    
+
     public DocenteMateriaPK(Integer codDocente, Integer codMateria) {
         this.codDocente = codDocente;
         this.codMateria = codMateria;
@@ -60,4 +60,5 @@ public class DocenteMateriaPK implements Serializable {
             return false;
         return true;
     }
+    
 }
